@@ -8,17 +8,21 @@ So, they must be:
 2) Easily maintainable
 3) Human-friendly
 
-Clearly, seeders in the SQL inserts format do not match these criteria. When I was thinking about readability, I came up with the idea that we could actually describe all data in a YAML file (https://gist.github.com/brezzhnev/0f0071d84e4956a43ddd230bc08aa96a), and if it becomes bigger, we can split it easily.
-From your end, please think about how you would implement a logic that parses that YAML file and writes all relations/entities to the database.
+Clearly, seeders in the SQL inserts format do not match these criteria. When I was thinking about readability, I came up with the idea that we could actually describe all data in a YAML [file](https://gist.github.com/brezzhnev/0f0071d84e4956a43ddd230bc08aa96a), and if it becomes bigger, we can split it easily.
+
+> From your end, please think about how you would implement a logic that parses that YAML file and writes all relations/entities to the database.
 An ideal format of output from you is a description of a potential solution that you think works the best and sketches of structure/classes/handlers/function calls (only high-level logic, fine to skip details).
 
+
 ----
+
 
 ## REQUIREMENTS
 
 
 - PHP **^8.0**
 - MySQL **^8**
+
 
 ## HOW TO INSTALL
 
@@ -37,7 +41,9 @@ An ideal format of output from you is a description of a potential solution that
 
 **6)** Run command `php artisan key:generate && php artisan config:clear`
 
+
 ## AFTER PULLING
+
 
 Run following commands after pulling fresh commit, to be sure all db and dependency changes applied
 
@@ -48,6 +54,7 @@ Run following commands after pulling fresh commit, to be sure all db and depende
 **3)** `npm update && npm run dev`
 
 **4)** `php artisan optimize`
+
 
 ## DEPLOYMENT
 
