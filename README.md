@@ -16,6 +16,41 @@ An ideal format of output from you is a description of a potential solution that
 
 ----
 
+# SOLUTION
+
+```
+    users
+        id - integer
+        name - string
+        email - string
+        created_at - timestamp
+        updated_at - timestamp
+
+    posts
+        id - integer
+        user_id - integer
+        title - string
+        text - string
+        created_at - timestamp
+        updated_at - timestamp
+        
+    comments
+        id - integer
+        user_id - integer
+        title - string
+        text - string
+        created_at - timestamp
+        updated_at - timestamp
+        
+    user_details
+        id - integer
+        user_id - integer
+        title - string
+        text - string
+        created_at - timestamp
+        updated_at - timestamp
+```
+
 
 ## REQUIREMENTS
 
@@ -75,4 +110,5 @@ Run following commands after pulling fresh commit, to be sure all db and depende
 ## DEPENDENCIES
 
 
-**1)** [laravel/laravel](https://github.com/laravel/laravel)
+- [laravel/laravel](https://github.com/laravel/laravel)
+- [symphony/yaml](https://github.com/symfony/yaml)
