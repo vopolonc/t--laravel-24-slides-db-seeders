@@ -5,22 +5,28 @@ namespace App\Models;
 use App\Packages\DynamicSeeder\Traits\HasDynamicSeeder;
 use Illuminate\Database\Eloquent\Model;
 
-class UserDetail extends Model
+class Like extends Model
 {
+    const UPDATED_AT = null;
+
     use HasDynamicSeeder;
 
-    protected $table = 'user_details';
-
     protected $fillable = [
+        'comment_id',
         'user_id',
-        'phone_number',
-        'address',
         'created_at',
-        'updated_at',
     ];
 
     /**
-     * Get the post that owns the comment.
+     * Get the post that owns the like.
+     */
+    public function comment(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Comment::class);
+    }
+
+    /**
+     * Get the user that owns the like.
      */
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

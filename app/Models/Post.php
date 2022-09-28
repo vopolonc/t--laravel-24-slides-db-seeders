@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use App\Packages\DynamicSeeder\Traits\HasDynamicSeeder;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use HasDynamicSeeder;
 
     protected $fillable = [
         'user_id',

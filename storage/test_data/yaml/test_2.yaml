@@ -7,10 +7,10 @@ users:
 
 userDetails:
   - user: admin@admin.com
-    phoneNumber: +380951112233
+    phoneNumber: "+380951112233"
     address: Ukraine, Kyiv, Oleksy Tyhogo 42, 2
   - user: user@user.com
-    phoneNumber: +380952223344
+    phoneNumber: "+380952223344"
     address: Vasylkiv, Decabrystiv st, 22, 2
 
 posts:
@@ -23,8 +23,12 @@ posts:
     comments:
       - user: admin@admin.com
         text: Can you make this slide exactly the same lay-out as alternative slide 7?
-      - user: admin@admin.com
+        likes:
+          - user: admin@admin.com
+          - user: user@user.com
+      - user: user@user.com
         text: Something wrong with this slide, isn't it?
+
   - user: admin@admin.com
     title: Second admin post title
     text: >
@@ -39,5 +43,9 @@ posts:
     comments:
       - user: user@user.com
         text: The best what i've ever reed!
-      - user: user@user.com
+        like:
+          - user: admin@admin.com
+          - user: user@user.com
+      - user: admin@admin.com
         text: Has someone noticed a wrong spaces between headings?
+
