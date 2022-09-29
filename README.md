@@ -24,7 +24,7 @@ it easily.
 
 #### Brief Approach
 
-> A brief approach will be considered here, you can see the code in more detail in the open pull request [implementation](https://github.com/vopolonc/t--laravel-24-slides-db-seeders/pull/1)
+> A brief approach will be considered here, you can see the code in more detail in the pull request [implementation](https://github.com/vopolonc/t--laravel-24-slides-db-seeders/pull/1) or in "package" [folder](https://github.com/vopolonc/t--laravel-24-slides-db-seeders/tree/main/app/Packages/DynamicSeeder)
 
 The first step is we need to parse the **file** into an array, format doesn't matter yaml/json/xml because as a result we always want to get a regular array with nested data.
 Therefore, let's start by creating several providers and get our coveted data array.
